@@ -26,12 +26,9 @@ public class App extends JFrame {
         listPage();
         addPage();
 
-
-        // Create a panel to hold the cards
         cards.add(panelListBuku, "CARD1");
         cards.add(panelAddBuku, "CARD2");
 
-        // Add the card panel to the frame
         getContentPane().add(cards);
 
         JButton button1 = new JButton("List Buku");
@@ -39,13 +36,11 @@ public class App extends JFrame {
         JButton button2 = new JButton("Add Buku");
         button2.addActionListener(e -> ((CardLayout) cards.getLayout()).show(cards, "CARD2"));
 
-        // Add buttons to the frame (optional)
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(button1);
         buttonPanel.add(button2);
         getContentPane().add(buttonPanel, BorderLayout.SOUTH);
 
-        // Pack and set visibility
         pack();
         setVisible(true);
     }
